@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99912c58-a9cb-4690-8fb0-f4a02e132d7c" name="Default Changelist" comment="" />
+    <list default="true" id="99912c58-a9cb-4690-8fb0-f4a02e132d7c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QSweepTerminal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QSweepTerminal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="QSweepTerminal" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -13,6 +21,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WpB6ketfl5YE1PqxiqJnrsnm4X" />
   <component name="ProjectViewState">
@@ -22,7 +33,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RunManager" selected="Python.QSweepTerminal">
     <configuration name="QSweepTerminal" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -104,33 +117,41 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="186" key="#Notifications/0.0.1920.1050/8.-1080.1920.1050@0.0.1920.1050" timestamp="1579971988276" />
+    <state x="614" y="89" key="#QSweepTerminal" timestamp="1580360127953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="614" y="89" key="#QSweepTerminal/0.0.1920.1040@0.0.1920.1040" timestamp="1580360127953" />
     <state width="939" height="580" key="DebuggerActiveHint" timestamp="1579966712851">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="751" height="460" key="DebuggerActiveHint/0.0.1536.834/8.-1080.1920.1050@0.0.1536.834" timestamp="1579849324168" />
     <state width="939" height="580" key="DebuggerActiveHint/0.0.1920.1050/8.-1080.1920.1050@0.0.1920.1050" timestamp="1579966712851" />
-    <state width="1899" height="166" key="GridCell.Tab.0.bottom" timestamp="1580303833761">
-      <screen x="8" y="-1080" width="1920" height="1050" />
+    <state width="1894" height="164" key="GridCell.Tab.0.bottom" timestamp="1580360438211">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1515" height="151" key="GridCell.Tab.0.bottom/0.0.1536.834/8.-1080.1920.1050@0.0.1536.834" timestamp="1579879908831" />
+    <state width="1894" height="164" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580360438211" />
     <state width="1899" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1050/8.-1080.1920.1050@0.0.1920.1050" timestamp="1580301993442" />
     <state width="1899" height="166" key="GridCell.Tab.0.bottom/0.0.1920.1050/8.-1080.1920.1050@8.-1080.1920.1050" timestamp="1580303833761" />
-    <state width="1899" height="166" key="GridCell.Tab.0.center" timestamp="1580303833761">
-      <screen x="8" y="-1080" width="1920" height="1050" />
+    <state width="1894" height="164" key="GridCell.Tab.0.center" timestamp="1580360438211">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1515" height="151" key="GridCell.Tab.0.center/0.0.1536.834/8.-1080.1920.1050@0.0.1536.834" timestamp="1579879908831" />
+    <state width="1894" height="164" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580360438211" />
     <state width="1899" height="291" key="GridCell.Tab.0.center/0.0.1920.1050/8.-1080.1920.1050@0.0.1920.1050" timestamp="1580301993442" />
     <state width="1899" height="166" key="GridCell.Tab.0.center/0.0.1920.1050/8.-1080.1920.1050@8.-1080.1920.1050" timestamp="1580303833761" />
-    <state width="1899" height="166" key="GridCell.Tab.0.left" timestamp="1580303833761">
-      <screen x="8" y="-1080" width="1920" height="1050" />
+    <state width="1894" height="164" key="GridCell.Tab.0.left" timestamp="1580360438211">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1515" height="151" key="GridCell.Tab.0.left/0.0.1536.834/8.-1080.1920.1050@0.0.1536.834" timestamp="1579879908831" />
+    <state width="1894" height="164" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580360438211" />
     <state width="1899" height="291" key="GridCell.Tab.0.left/0.0.1920.1050/8.-1080.1920.1050@0.0.1920.1050" timestamp="1580301993442" />
     <state width="1899" height="166" key="GridCell.Tab.0.left/0.0.1920.1050/8.-1080.1920.1050@8.-1080.1920.1050" timestamp="1580303833761" />
-    <state width="1899" height="166" key="GridCell.Tab.0.right" timestamp="1580303833761">
-      <screen x="8" y="-1080" width="1920" height="1050" />
+    <state width="1894" height="164" key="GridCell.Tab.0.right" timestamp="1580360438211">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1515" height="151" key="GridCell.Tab.0.right/0.0.1536.834/8.-1080.1920.1050@0.0.1536.834" timestamp="1579879908831" />
+    <state width="1894" height="164" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580360438211" />
     <state width="1899" height="291" key="GridCell.Tab.0.right/0.0.1920.1050/8.-1080.1920.1050@0.0.1920.1050" timestamp="1580301993442" />
     <state width="1899" height="166" key="GridCell.Tab.0.right/0.0.1920.1050/8.-1080.1920.1050@8.-1080.1920.1050" timestamp="1580303833761" />
     <state width="1899" height="291" key="GridCell.Tab.1.bottom" timestamp="1580301993442">
@@ -157,10 +178,15 @@
     <state width="1515" height="151" key="GridCell.Tab.1.right/0.0.1536.834/8.-1080.1920.1050@0.0.1536.834" timestamp="1579879908831" />
     <state width="1899" height="291" key="GridCell.Tab.1.right/0.0.1920.1050/8.-1080.1920.1050@0.0.1920.1050" timestamp="1580301993442" />
     <state width="1899" height="296" key="GridCell.Tab.1.right/0.0.1920.1050/8.-1080.1920.1050@8.-1080.1920.1050" timestamp="1580227893995" />
-    <state x="821" y="127" key="SettingsEditor" timestamp="1580121358033">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="675" y="82" key="SettingsEditor" timestamp="1580389204546">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="675" y="82" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580389204546" />
     <state x="821" y="127" key="SettingsEditor/0.0.1920.1050/8.-1080.1920.1050@0.0.1920.1050" timestamp="1580121358033" />
+    <state x="576" y="307" key="com.intellij.ide.util.TipDialog" timestamp="1580359978896">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="576" y="307" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580359978896" />
     <state x="539" y="195" width="840" height="854" key="search.everywhere.popup" timestamp="1580010023758">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
