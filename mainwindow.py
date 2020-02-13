@@ -21,8 +21,8 @@ class MainWindow(QWidget):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        self.verticalLayout = QVBoxLayout()
-        self.ui.horizontalLayout.addLayout(self.verticalLayout)
+        self.frame_verticalLayout = QVBoxLayout()
+        self.ui.m_PlotFrame.setLayout(self.frame_verticalLayout)
 
         self._initPlot()
         self._initUI()
@@ -76,10 +76,11 @@ class MainWindow(QWidget):
 
         self.ui.m_SendCmdBtn.clicked.connect(self._sendCmd)
 
-        brand_label = QLabel()
-        brand_label.setText('<b><u>北京七星华创微波技术有限公司</u> <i>CopyRight © 2019-2029 v1.0.0</i></b>')
-        brand_label.setAlignment(Qt.AlignRight)
-        self.verticalLayout.addWidget(brand_label)
+        self.ui.brand_label.setText('<b><u>北京七星华创微波技术有限公司</u></b>')
+        # self.ui.brand_label.setAlignment(Qt.AlignRight)
+        self.ui.copyright_label.setText('<b><i>CopyRight © 2019-2029 v1.0.0</i></b>')
+        # self.ui.copyright_label.setAlignment(Qt.AlignRight)
+        # self.verticalLayout.addWidget(brand_label)
 
     def _rfSwitchChanged(self):
         if self.ui.m_RadioSwitchCheckBox.isChecked():
@@ -92,7 +93,8 @@ class MainWindow(QWidget):
         self.plot_temp = self.plot_win.addPlot()
         self.plot_win.nextRow()
         self.plot_bite = self.plot_win.addPlot()
-        self.verticalLayout.addWidget(self.plot_win)
+        # self.verticalLayout.addWidget(self.plot_win)
+        self.frame_verticalLayout.addWidget(self.plot_win)
 
         self.plot_temp.vb.setMouseEnabled(False, False)
         self.plot_temp.showGrid(True, True, 0.8)

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1279</width>
-    <height>1000</height>
+    <width>1160</width>
+    <height>810</height>
    </rect>
   </property>
   <property name="font">
@@ -22,7 +22,7 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
@@ -316,58 +316,127 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="m_FrameDataEdit">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
        </property>
-       <property name="minimumSize">
+       <property name="sizeHint" stdset="0">
         <size>
-         <width>260</width>
-         <height>0</height>
+         <width>20</width>
+         <height>108</height>
         </size>
        </property>
-       <property name="maximumSize">
-        <size>
-         <width>260</width>
-         <height>16777215</height>
-        </size>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="brand_label">
+       <property name="text">
+        <string>TextLabel</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="m_SendCmdBtn">
+      <widget class="QLabel" name="copyright_label">
        <property name="text">
-        <string>发送命令</string>
+        <string>TextLabel</string>
        </property>
       </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QFrame" name="m_PlotFrame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QTextEdit" name="m_FrameDataEdit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>60</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="m_SendCmdBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>发送命令</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
      <item>
       <widget class="QGroupBox" name="groupBox_4">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>260</width>
+         <width>0</width>
          <height>0</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>260</width>
+         <width>16777215</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="title">
         <string>工作状态</string>
        </property>
-       <layout class="QFormLayout" name="formLayout_4">
+       <layout class="QGridLayout" name="gridLayout">
         <item row="0" column="0">
          <widget class="QLabel" name="label_18">
           <property name="text">
@@ -377,6 +446,12 @@
         </item>
         <item row="0" column="1">
          <widget class="QLCDNumber" name="m_sendBytesNumLcd">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="frameShape">
            <enum>QFrame::Box</enum>
           </property>
@@ -390,58 +465,76 @@
            <bool>false</bool>
           </property>
           <property name="digitCount">
-           <number>13</number>
+           <number>18</number>
           </property>
           <property name="segmentStyle">
            <enum>QLCDNumber::Flat</enum>
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
+        <item row="0" column="2">
          <widget class="QLabel" name="label_19">
           <property name="text">
            <string>接收字节数:</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="1">
+        <item row="0" column="3">
          <widget class="QLCDNumber" name="m_recvBytesNumLcd">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="digitCount">
-           <number>13</number>
+           <number>18</number>
           </property>
           <property name="segmentStyle">
            <enum>QLCDNumber::Flat</enum>
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="0" column="4">
          <widget class="QLabel" name="label_20">
           <property name="text">
            <string>发送帧数:</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="1">
+        <item row="0" column="5">
          <widget class="QLCDNumber" name="m_sendFrameNumLcd">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="digitCount">
-           <number>13</number>
+           <number>18</number>
           </property>
           <property name="segmentStyle">
            <enum>QLCDNumber::Flat</enum>
           </property>
          </widget>
         </item>
-        <item row="3" column="0">
+        <item row="0" column="6">
          <widget class="QLabel" name="label_21">
           <property name="text">
            <string>接收帧数:</string>
           </property>
          </widget>
         </item>
-        <item row="3" column="1">
+        <item row="0" column="7">
          <widget class="QLCDNumber" name="m_recvFrameNumLcd">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="digitCount">
-           <number>13</number>
+           <number>18</number>
           </property>
           <property name="segmentStyle">
            <enum>QLCDNumber::Flat</enum>

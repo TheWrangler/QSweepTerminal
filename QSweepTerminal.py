@@ -19,7 +19,7 @@ def readQSS(file):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
-    qss_file = "F:/QSweepTerminal/qss/Obit.qss"
+    qss_file = "./qss/Obit.qss"
     qss = readQSS(qss_file)
     app.setStyleSheet(qss)
 
