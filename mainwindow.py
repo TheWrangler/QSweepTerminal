@@ -76,7 +76,7 @@ class MainWindow(QWidget):
 
         self.ui.m_SendCmdBtn.clicked.connect(self._sendCmd)
 
-        self.ui.brand_label.setText('<b><u>北京七星华创微波技术有限公司</u></b>')
+        self.ui.brand_label.setText('<b><u>北京七星华创微波电子有限公司</u></b>')
         # self.ui.brand_label.setAlignment(Qt.AlignRight)
         self.ui.copyright_label.setText('<b><i>CopyRight © 2019-2029 v1.0.0</i></b>')
         # self.ui.copyright_label.setAlignment(Qt.AlignRight)
@@ -110,9 +110,9 @@ class MainWindow(QWidget):
         self.plot_bite.setMenuEnabled(False)
         # self.plot_bite.vb.disableAutoRange(pyqtgraph.graphicsItems.ViewBox.ViewBox.YAxis)
         # self.plot_bite.vb.disableAutoRange(pyqtgraph.graphicsItems.ViewBox.ViewBox.XAxis)
-        self.plot_bite.setYRange(0, 3.3)
+        self.plot_bite.setYRange(0, 50)
         self.plot_bite.setXRange(0, 5000)
-        self.plot_bite.getAxis('left').setLabel('检波电压', units='V')
+        self.plot_bite.getAxis('left').setLabel('检波功率', units='dBm')
 
         self.plot_temp_curve = self.plot_temp.plot(pen='g')
         self.plot_bite_curve = self.plot_bite.plot(pen='g')
