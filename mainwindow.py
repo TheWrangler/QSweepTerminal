@@ -56,6 +56,7 @@ class MainWindow(QWidget):
         self.ui.m_ChBPhaseEdit.setText("28.125")
         self.ui.m_ChCAmpEdit.setText("5")
         self.ui.m_ChCPhaseEdit.setText("28.125")
+        self.ui.m_TrigDelayEdit.setText("0")
 
         self.ui.m_CenterFreqEdit.editingFinished.connect(self._updateFrame)
         self.ui.m_ModulateFreqEdit.editingFinished.connect(self._updateFrame)
@@ -73,12 +74,15 @@ class MainWindow(QWidget):
         self.ui.m_ChBPhaseEdit.editingFinished.connect(self._updateFrame)
         self.ui.m_ChCAmpEdit.editingFinished.connect(self._updateFrame)
         self.ui.m_ChCPhaseEdit.editingFinished.connect(self._updateFrame)
+        self.ui.m_TrigModeCombo.currentIndexChanged.connect(self._updateFrame)
+        self.ui.m_TrigDelayEdit.editingFinished.connect(self._updateFrame)
+
 
         self.ui.m_SendCmdBtn.clicked.connect(self._sendCmd)
 
-        self.ui.brand_label.setText('<b><u>北京七星华创微波电子有限公司</u></b>')
+        # self.ui.brand_label.setText('<b><u>QSweepTerminal</u></b>')
         # self.ui.brand_label.setAlignment(Qt.AlignRight)
-        self.ui.copyright_label.setText('<b><i>CopyRight © 2019-2029 v1.0.0</i></b>')
+        # self.ui.copyright_label.setText('<i>CopyRight © 2019-2029 v1.0.0</i>')
         # self.ui.copyright_label.setAlignment(Qt.AlignRight)
         # self.verticalLayout.addWidget(brand_label)
 
@@ -110,9 +114,9 @@ class MainWindow(QWidget):
         self.plot_bite.setMenuEnabled(False)
         # self.plot_bite.vb.disableAutoRange(pyqtgraph.graphicsItems.ViewBox.ViewBox.YAxis)
         # self.plot_bite.vb.disableAutoRange(pyqtgraph.graphicsItems.ViewBox.ViewBox.XAxis)
-        self.plot_bite.setYRange(0, 50)
+        self.plot_bite.setYRange(0, 5)
         self.plot_bite.setXRange(0, 5000)
-        self.plot_bite.getAxis('left').setLabel('检波功率', units='dBm')
+        self.plot_bite.getAxis('left').setLabel('检波电压', units='v')
 
         self.plot_temp_curve = self.plot_temp.plot(pen='g')
         self.plot_bite_curve = self.plot_bite.plot(pen='g')
@@ -140,70 +144,94 @@ class MainWindow(QWidget):
             self.ui.m_SerialPortCombo.addItem(port.portName())
 
     def _updateFrame(self):
+        # 跳频率
         modulate_freq = self.ui.m_ModulateFreqEdit.text()
         modulate_freq = int(modulate_freq)
         # frame_cmd = "#KR:" + str(modulate_freq * 32768) + ";"
         frame_cmd = "#KR:" + '{:0=6}'.format(modulate_freq * 32768) + ";"
 
+        # 中心频点
         center_freq = self.ui.m_CenterFreqEdit.text()
         center_freq = int(center_freq)
         frame_cmd += "#FRQ:" + '{:0=5}'.format(center_freq) + ";"
 
+        # 脉冲宽度
         pulse_width = self.ui.m_PulseWidthEdit.text()
         pulse_width = int(pulse_width)
         frame_cmd += "#PW:" + '{:0=7}'.format(pulse_width) + ";"
 
+        # 重复周期
         pulse_reply_period = self.ui.m_PulseReplyPeriodEdit.text()
         pulse_reply_period = int(pulse_reply_period)
         frame_cmd += "#PRT:" + '{:0=7}'.format(pulse_reply_period) + ";"
 
+        # 衰减
         att = self.ui.m_AttEdit.text()
         att = int(att)
         frame_cmd += "#ATT:" + '{:0=2}'.format(att) + ";"
 
+        # 增益
         gn = self.ui.m_GNEdit.text()
         gn = int(gn)
         frame_cmd += "#GN:" + '{:0=2}'.format(gn) + ";"
 
+        # 射频开关
         if self.ui.m_RadioSwitchCheckBox.isChecked():
             frame_cmd += "#RF:1;"
         else:
             frame_cmd += "#RF:0;"
 
+        # 系统模式
         sys_mode = self.ui.m_SysModeCombox.currentIndex() + 1
         frame_cmd += "#MOD:" + str(sys_mode) + ";"
 
+        # 校准时长
         cali_period = self.ui.m_CaliPeriodEdit.text()
         cali_period = float(cali_period)
         cali_period = int(cali_period * 10)
         frame_cmd += "#CT:" + '{:0=6}'.format(cali_period) + ";"
 
+        # 接收通道A幅度衰减
         cha_amp = self.ui.m_ChAAmpEdit.text()
         cha_amp = int(cha_amp)
         frame_cmd += "#AAA:" + '{:0=2}'.format(cha_amp) + ";"
 
+        # 接收通道A相位偏置
         cha_phase = self.ui.m_ChAPhaseEdit.text()
         cha_phase = float(cha_phase)
         cha_phase = int(cha_phase / self._PHASE_SCALE)
         frame_cmd += "#PSA:" + '{:0=2}'.format(cha_phase) + ";"
 
+        # 接收通道B幅度衰减
         chb_amp = self.ui.m_ChBAmpEdit.text()
         chb_amp = int(chb_amp)
         frame_cmd += "#AAB:" + '{:0=2}'.format(chb_amp) + ";"
 
+        # 接收通道B相位偏置
         chb_phase = self.ui.m_ChBPhaseEdit.text()
         chb_phase = float(chb_phase)
         chb_phase = int(chb_phase / self._PHASE_SCALE)
         frame_cmd += "#PSB:" + '{:0=2}'.format(chb_phase) + ";"
 
+        # 接收通道C幅度衰减
         chc_amp = self.ui.m_ChCAmpEdit.text()
         chc_amp = int(chc_amp)
         frame_cmd += "#AAC:" + '{:0=2}'.format(chc_amp) + ";"
 
+        # 接收通道C相位偏置
         chc_phase = self.ui.m_ChCPhaseEdit.text()
         chc_phase = float(chc_phase)
         chc_phase = int(chc_phase / self._PHASE_SCALE)
         frame_cmd += "#PSC:" + '{:0=2}'.format(chc_phase) + ";"
+
+        # 触发模式
+        trig_mode = self.ui.m_TrigModeCombo.currentIndex()
+        frame_cmd += "#CF:" + str(sys_mode) + ";"
+
+        # 延迟
+        trig_delay = self.ui.m_TrigDelayEdit.text()
+        trig_delay = int(trig_delay)
+        frame_cmd += "#YS:" + '{:0=2}'.format(trig_delay) + ";"
 
         self.ui.m_FrameDataEdit.setText(frame_cmd)
 
@@ -241,14 +269,13 @@ class MainWindow(QWidget):
         data = self._serialRtx.recv()
         if len(data) == 0:
             return
+        # print(data.hex(' '))
         self._serial_process_buf.extend(data)
         self.recvDataProcess()
 
-    def recvDataProcess(self):
-        # if len(self._serial_process_buf) < 17 :
-        #     return
 
-        start_index = self._serial_process_buf.find(b'$sta')
+    def recvDataProcess(self):
+        start_index = self._serial_process_buf.find(b'#KR:')
         if start_index == -1:
             self._serial_process_buf.clear()
             return
@@ -259,15 +286,22 @@ class MainWindow(QWidget):
 
         end_index = self._serial_process_buf.find(b'*\r\n')
         if end_index == -1:
-            if len(self._serial_process_buf) > 100:
+            if len(self._serial_process_buf) > 200:
                 for i in range(100):
                     self._serial_process_buf.pop(0)
                 return self.recvDataProcess()
             else:
                 return
 
-        frame = self._serial_process_buf[0:end_index]
-        self._frameParse(frame)
+        mid_index = self._serial_process_buf.find(b'#YS:')
+        reply_frame = self._serial_process_buf[start_index:mid_index+7]
+        reply_frame_str = ""
+        for byte in reply_frame:
+            reply_frame_str += ('%c' % byte)
+        self.ui.m_RplyFrameEdit.setText(reply_frame_str)
+
+        sta_frame = self._serial_process_buf[mid_index+8:end_index]
+        self._frameParse(sta_frame)
         for i in range(end_index + 1):
             self._serial_process_buf.pop(0)
 
@@ -277,17 +311,19 @@ class MainWindow(QWidget):
         self.recvFrameNum += 1
         self.ui.m_recvFrameNumLcd.display(self.recvFrameNum)
 
-        field = frame.split(b',')
+        field = frame.split(b';')
         if len(field) < 3:
             return
 
-        temp_str = field[1].decode('utf-8', 'ignore')
+        temp_field = field[0].split(b':')
+        temp_str = temp_field[1].decode('utf-8', 'ignore')
         try:
             self.temp = float(temp_str)
         except ValueError:
             pass
 
-        bite_str = field[2].decode('utf-8', 'ignore')
+        bite_field = field[1].split(b':')
+        bite_str = bite_field[1].decode('utf-8', 'ignore')
         try:
             self.bite = float(bite_str)
         except ValueError:

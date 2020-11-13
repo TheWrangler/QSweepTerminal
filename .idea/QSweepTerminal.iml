@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/venv3.7" />
       <excludeFolder url="file://$MODULE_DIR$/venv37" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.8 (QSweepTerminal)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (QSweepTerminal)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
