@@ -19,44 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99912c58-a9cb-4690-8fb0-f4a02e132d7c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/QSweepTerminal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QSweepTerminal.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/mainwindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/mainwindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtCore.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtCore.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtDBus.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtDBus.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtGui.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtGui.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtNetwork.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtNetwork.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtOpenGL.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtOpenGL.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtPrintSupport.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtPrintSupport.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtSql.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtSql.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtTest.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtTest.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtWidgets.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtWidgets.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtXml.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/QtXml.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/__init__.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/__init__.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/sip.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5-stubs/sip.pyi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.13.1.4-py3.8.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.13.1.4-py3.8.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.13.1.4-py3.8.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.13.1.4-py3.8.egg-info/installed-files.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.13.1.4-py3.8.egg-info/requires.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PyQt5_stubs-5.13.1.4-py3.8.egg-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/python.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv37/Scripts/Activate.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv37/Scripts/activate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv37/Scripts/activate.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv37/Scripts/deactivate.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv37/Scripts/python.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv37/Scripts/pythonw.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv37/pyvenv.cfg" beforeDir="false" />
-    </list>
+    <list default="true" id="99912c58-a9cb-4690-8fb0-f4a02e132d7c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
